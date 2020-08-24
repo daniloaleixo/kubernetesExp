@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nodehelloworld-controller
+spec:
+  replicas: 2
+  selector:
+    app: helloword
+  template:
+    metadata:
+      labels:
+        app: helloword
+    spec:
+      containers:
+      - name: k8s-demo
+        image: hello-world
+        ports:
+        - containerPort: 3001
