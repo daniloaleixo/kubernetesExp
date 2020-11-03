@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: k8s-demo
-        image: hello-world
+        image: k8s.gcr.io/echoserver:1.4
         ports:
         - containerPort: 3001
